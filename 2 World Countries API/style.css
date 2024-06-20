@@ -27,11 +27,22 @@ nav {
     margin: auto;
     width: 80%;
 }
+
+nav h2 .fa-house {
+    font-size: 24px;
+    margin-right: 20px;
+}
+
 nav h2 {
     font-weight: 500;
 }
+
 nav p {
     font-weight: 400;
+}
+
+nav .fa-moon {
+    font-size: 15px;
 }
 
 main {
@@ -61,31 +72,46 @@ main {
     padding-bottom: 20px;
     transition: all 0.2s;
 }
-.card:hover{
+
+.card:hover {
     background-color: #f6f6f6;
     box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.6);
-    transform:translateY(-5px)
-}
-.card:active{
-    transform:translateY(3px)
+    transform: translateY(-5px)
 }
 
-a {
-    text-decoration-line: none;
-    color: black;
+.card:active {
+    transform: translateY(3px)
 }
+
+a:visited,
+a:hover,
+a:active,
+a {
+    color: black;
+    text-decoration-line: none;
+}
+
 .card img {
     width: 100%;
     max-height: 200px;
 }
+
 .info-box {
     padding: 4px 16px;
 }
+
 .card h3 {
     font-size: 18px;
     font-weight: 800;
     margin: 7px 0;
 }
+
 .card strong {
     font-weight: 700;
+}
+
+@media(max-width: 710px) {
+    .main-container {
+        justify-content: center;
+    }
 }
