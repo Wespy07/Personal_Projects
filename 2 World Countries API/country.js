@@ -1,35 +1,92 @@
+// the countries page javascript, this is separate from my main js
 const countryName = new URLSearchParams(window.location.search).get('name');
 const myImage = document.querySelector('img')
 const countryBox = document.querySelector('.country-info')
 const backBtn = document.querySelector('.back-page')
+const countryHeading = document.querySelector('.country-heading')
+const nativeName = document.querySelector('.native-name')
+const population = document.querySelector('.population')
+const region = document.querySelector('.region')
+const subRegion = document.querySelector('.sub-region')
+const capital = document.querySelector('.capital')
+const topLevelDomain = document.querySelector('.top-level-domain')
+const currencies = document.querySelector('.currencies')
+const languages = document.querySelector('.languages')
+const borderCountries = document.querySelector('.border-countries')
 
-fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`).then((res) => res.json()).then((data) => {
-    console.log(data[0]);
-    myImage.src = data[0].flags.svg
-    myImage.alt = `${data[0].name.common}`
+fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`).then((res) => res.json()).then(([countriesData]) => {
+    // console.log(countriesData.currencies);
+    myImage.src = countriesData.flags.svg
+    myImage.alt = `${countriesData.name.common}`
 
-    countryBox.innerHTML = `
-            <h2>${data[0].name.common}</h2>
-            <div class="country-info-box">
-                <div>
-                    <p><strong>Official Name: </strong><span>${data[0].name.official}</span></p>
-                    <p><strong>Population: </strong><span>${data[0].population.toLocaleString('en-IN')}</span></p>
-                    <p><strong>Region: </strong><span>${data[0].region}</span></p>
-                    <p><strong>Sub Region: </strong><span>${data[0].subregion}</span></p>
-                    <p><strong>Capital: </strong><span>${data[0].capital[0]}</span></p>
-                </div>
-                <div>
-                    <p><strong>Top Level Domain: </strong><span>${data[0].tld[0]}</span></p>
-                    <p><strong>Currencies: </strong><span>Name</span></p>
-                    <p><strong>Languages: </strong><span>Name</span></p>
-                </div>
-            </div>
-            <div class="border-countries">
-                <p><strong>Border Countries: &nbsp;&nbsp;</strong><span>Name</span><span>Name</span></p>
-            </div>
-    `
+    // official Name of the country     
+    countryHeading.innerText = countriesData.name.common
+
+    // native Name of the country 
+    if (countriesData.name.nativeName) {
+        nativeName.innerText = Object.values(countriesData.name.nativeName)[0].common;
+    } else {
+        nativeName.innerText = countriesData.name.common;
+    }
+    // population of the country
+    if (countriesData.population) {
+        population.innerText = countriesData.population.toLocaleString('en-IN')
+    }
+
+    // region of the country
+    if (countriesData.region) {
+        region.innerText = countriesData.region
+    }
+
+    // sub-region of the country
+    if (countriesData.subregion) {
+        subRegion.innerText = countriesData.subregion
+    }
+
+    // capital of the country
+    if (countriesData.capital) {
+        capital.innerText = countriesData.capital[0]
+    }
+
+    // top level domain of the country
+    if (countriesData.tld) {
+        topLevelDomain.innerText = countriesData.tld.join(', ')
+    } else {
+        topLevelDomain.innerText = countriesData.tld[0]
+    }
+
+    // currencies of the country
+    if (countriesData.currencies) {
+        currencies.innerText = Object.values(countriesData.currencies)[0].name
+    }
+
+    // languages of the country
+    if (countriesData.languages) {
+        languages.innerText = Object.values(countriesData.languages).join(', ')
+    }
+
+    // border countries of the country
+    // console.log(countriesData.borders);
+
+
+    if (countriesData.borders) {
+        countriesData.borders.forEach(border => {
+            // console.log(borderCountries);
+
+            fetch(`https://restcountries.com/v3.1/alpha/${border}`)
+                .then((res) => res.json())
+                .then(([borderCountry]) => {
+                    // console.log(borderCountry.name.common);
+                    const borderCountryTag = document.createElement('a')
+                    borderCountryTag.innerText = borderCountry.name.common
+                    borderCountryTag.href = `country.html?name=${borderCountry.name.common}`
+                    console.log(borderCountryTag);
+                    borderCountries.append(borderCountryTag)
+                });
+        })
+    }
+
 })
-
 
 backBtn.addEventListener('click', () => {
     window.history.go(-1)

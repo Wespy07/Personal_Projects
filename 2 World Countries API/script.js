@@ -5,7 +5,9 @@ fetch('https://restcountries.com/v3.1/all')
     .then((res) => res.json())
     .then((data) => {
         data.forEach(countriesData => {
-            console.log();
+            // console.log(countriesData.name.common);
+            // console.log(countriesData.tld.join(', '));
+
 
             const makeCard = document.createElement('a')
             makeCard.classList.add('card')
@@ -23,8 +25,3 @@ fetch('https://restcountries.com/v3.1/all')
         });
     })
 
-
-// card.addEventListener('click', (e) => {
-//     e.preventDefault;
-//     window.location.href = 'http://127.0.0.1:3000/country.html';
-// })
