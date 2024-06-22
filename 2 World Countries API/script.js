@@ -1,18 +1,51 @@
 const mainContainer = document.querySelector('.main-container')
 const card = document.querySelector('.card')
+const filterBox = document.querySelector('.filter-box')
+const inputBox = document.querySelector('.inputbox')
+const body = document.querySelector('body')
+const darkModeBtn = document.querySelector('.dark-mode-toggle')
+const moon = document.querySelector('nav .fa-moon')
+const sun = document.querySelector('nav .fa-sun')
+const darkModeText = document.querySelector('nav p')
 
+let allTheCountries
 fetch('https://restcountries.com/v3.1/all')
     .then((res) => res.json())
     .then((data) => {
-        data.forEach(countriesData => {
-            // console.log(countriesData.name.common);
-            // console.log(countriesData.tld.join(', '));
+        loadCountries(data)
+        allTheCountries = data
+        // console.log(allTheCountries);
+    })
 
 
-            const makeCard = document.createElement('a')
-            makeCard.classList.add('card')
-            makeCard.href = `./country.html?name=${countriesData.name.common}`
-            makeCard.innerHTML = `
+
+filterBox.addEventListener('change', (e) => {
+    // console.log(e.target.value);
+    if (e.target.value === 'All') {
+        fetch('https://restcountries.com/v3.1/all')
+            .then((res) => res.json())
+            .then((data) => {
+                loadCountries(data)
+            })
+    } else {
+        fetch(`https://restcountries.com/v3.1/region/${e.target.value}`)
+            .then((res) => res.json())
+            .then((data) => {
+                loadCountries(data)
+            })
+    }
+
+
+
+})
+
+function loadCountries(data) {
+    mainContainer.innerHTML = ''
+    data.forEach(countriesData => {
+        const makeCard = document.createElement('a')
+        makeCard.classList.add('card')
+        makeCard.href = `./country.html?name=${countriesData.name.common}`
+        makeCard.innerHTML = `
         <img src="${countriesData.flags.svg}">
         <div class="info-box">
             <h3>${countriesData.name.common}</h3>
@@ -21,7 +54,30 @@ fetch('https://restcountries.com/v3.1/all')
             <p><strong>Capital: </strong> ${countriesData.capital}</p>
         </div>
 `
-            mainContainer.append(makeCard)
-        });
-    })
+        mainContainer.append(makeCard)
 
+    })
+}
+function noCountries() {
+    mainContainer.innerHTML = ''
+    mainContainer.innerHTML = '<p>No matching countries found.</p>'
+}
+
+inputBox.addEventListener('input', (e) => {
+    // console.log(e.target.value);
+    const filteredInput = allTheCountries.filter((countryName) => countryName.name.common.toLowerCase().includes(e.target.value.toLowerCase()))
+    // console.log(filteredInput);
+    if (filteredInput === true) {
+        loadCountries(filteredInput)
+    } else {
+        noCountries()
+    }
+
+})
+
+
+darkModeBtn.addEventListener('click', () => {
+    body.classList.toggle('dark-mode')
+    moon.style.display = 'none'
+    sun.style.display = 'inline'
+})

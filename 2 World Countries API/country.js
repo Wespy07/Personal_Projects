@@ -84,6 +84,11 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`).then((
                     borderCountries.append(borderCountryTag)
                 });
         })
+    } else {
+        const borderCountryTag = document.createElement('a')
+                    // borderCountryTag.innerText = 'none'
+                    // borderCountries.append(borderCountryTag)
+                    borderCountries.append('None')
     }
 
 })

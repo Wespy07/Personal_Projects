@@ -5,19 +5,40 @@
     padding: 0;
 }
 
+:root {
+    --background-color: #f1f1f1;
+    --text-color: black;
+    --second-text-color: gray;
+    --element-color: white;
+    --hover-color: #f6f6f6;
+    --box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.3);
+    --box-shadow-hover: 4px 8px 8px 0px rgba(0, 0, 0, 0.6);
+}
+
 body {
     font-family: "Nunito Sans", sans-serif;
-    background-color: #f1f1f1;
+    background-color: var(--background-color);
+    /* background-color: hsl(207, 26%, 17%); */
+}
+body.dark-mode {
+    --background-color:  hsl(207, 26%, 17%);
+    --text-color: white;
+    --second-text-color: white;
+    --element-color: hsl(209, 23%, 22%);
+    --hover-color: hsl(209, 35%, 25%);;
+    color: white;
+    --box-shadow: 4px 8px 8px 0px rgba(139, 139, 139, 0.3);
+    --box-shadow-hover: 4px 8px 8px 0px rgba(139, 139, 139, 0.6);
 }
 
 header {
     width: 100%;
     height: 60px;
-    box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--background-color);
 }
 
 nav {
@@ -31,31 +52,96 @@ nav {
 nav h2 .fa-house {
     font-size: 24px;
     margin-right: 20px;
+    color: var(--text-color);
 }
 
 nav h2 {
     font-weight: 500;
+    color: var(--text-color);
 }
 
 nav p {
     font-weight: 400;
+    cursor: pointer;
 }
 
 nav .fa-moon {
     font-size: 15px;
 }
-
-main {
-    width: 100%;
+nav .fa-sun {
+    font-size: 15px;
+    display: none;
 }
 
+main {
+    width: 75%;
+    margin: auto;
+}
+
+.search-and-filter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    /* color: gray;
+    height: auto;
+    padding-left: 24px; */
+    /* margin: auto;     */
+    margin-top: 50px;
+    /* background-color: rgb(255, 185, 185); */
+    /* border-radius: 4px; */
+    /* box-shadow: 0px 3px 8px 3px rgba(0, 0, 0, 0.3); */
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--second-text-color);
+    height: auto;
+    padding-left: 24px;
+    border-radius: 4px;
+    background-color: var(--element-color);
+    box-shadow: var(--box-shadow);
+    width: 310px;
+    overflow: hidden;
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    padding: 12px 8px;
+    /* font-size: 17px; */
+    background-color: var(--element-color);
+    color: inherit;
+    width: 88%;
+}
+.search-box input::placeholder {
+    color: inherit;
+}
+
+.regions-filter {
+    border: none;
+    outline: none;
+    color: var(--second-text-color);
+    height: auto;
+    border-radius: 4px;
+    background-color: var(--element-color);
+    box-shadow: var(--box-shadow);
+    width: 150px;
+    padding: 12px 8px;
+}
+.regions-filter option {
+    color: inherit;
+    font-size: 16px;
+}
 .main-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 24px;
-    width: 75%;
+    width: 100%;
     height: auto;
     margin: auto;
     margin-top: 50px;
@@ -65,8 +151,8 @@ main {
     width: 250px;
     height: 300px;
     font-size: 15px;
-    border: 1px solid white;
-    background-color: #fff;
+    border: 1px solid var(--element-color);
+    background-color: var(--element-color);
     border-radius: 8px;
     overflow: hidden;
     padding-bottom: 20px;
@@ -74,8 +160,8 @@ main {
 }
 
 .card:hover {
-    background-color: #f6f6f6;
-    box-shadow: 4px 8px 8px 0px rgba(0, 0, 0, 0.6);
+    background-color: var(--hover-color);
+    box-shadow: var(--box-shadow-hover);
     transform: translateY(-5px)
 }
 
@@ -87,7 +173,7 @@ a:visited,
 a:hover,
 a:active,
 a {
-    color: black;
+    color: var(--text-color);
     text-decoration-line: none;
 }
 
@@ -110,8 +196,32 @@ a {
     font-weight: 700;
 }
 
-@media(max-width: 710px) {
+@media(max-width: 768px) {
     .main-container {
         justify-content: center;
+    }
+    .search-and-filter {
+        flex-direction: column;
+        align-items: baseline;
+        gap: 20px;
+    }
+    .search-box {
+        width: 200px;
+    }
+    .regions-filter {
+        width: 150px;
+    }
+    nav{
+        width: 90%;
+    }
+    nav h2 {
+        font-size: 20px;
+    }
+    nav h2 .fa-house {
+        font-size: 24px;
+        margin-right: 5px;
+    }
+    nav p {
+        font-size: 12px;
     }
 }

@@ -18,12 +18,29 @@
         <nav>
             <h2><a href="/"><i class="fa-solid fa-house"></i></a> Where in the world?</h2>
 
-            <p><i class="fa-solid fa-moon"></i> Dark Mode</p>
+            <p class="dark-mode-toggle"><i class="fa-solid fa-moon"></i><i class="fa-solid fa-sun"></i> Dark Mode</p>
         </nav>
     </header>
 
     <main>
         <div class="search-and-filter">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="inputbox" type="text" placeholder="Search for a country...">
+            </div>
+
+
+            <div class="filter-box">
+                <select class="regions-filter">
+                    <option hidden>Filter by region</option>
+                    <option value="All">All</option>
+                    <option value="Africa">Africa</option>
+                    <option value="America">America</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </div>
 
         </div>
 
