@@ -83,13 +83,11 @@ nav .fa-sun {
 
 main {
     max-width: 1200px;
-    /* background-color: rgb(253, 214, 220); */
     margin: auto;
     height: 90vh;
 }
 
 .back-btn {
-    /* background-color: yellow; */
     margin-block: 48px;
     max-width: 1100px;
     margin-inline: auto;
@@ -114,7 +112,6 @@ main {
     max-width: 1200px;
     margin: 40px;
     display: flex;
-    /* background-color: rgb(186, 223, 186); */
 }
 
 .flag-img img {
@@ -123,9 +120,7 @@ main {
 }
 
 .country-info {
-    /* background-color: pink; */
     width: 100%;
-    /* margin-inline: 44px; */
     margin: 16px 25px;
     font-size: 15px;
 }
@@ -135,7 +130,6 @@ main {
     justify-content: space-between;
     gap: 40px;
     width: 500px;
-    /* background-color: yellow; */
     margin-bottom: 52px;
 }
 
