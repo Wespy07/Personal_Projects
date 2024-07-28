@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #212121;
+    min-height: 100vh;
+    color: white;
+    display: grid;
+    place-items: center;
+}
+
+main {
+    height: 550px;
+    width: 550px;
+    background-color: #ffffff1e;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 48px;
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid;
+    flex-basis: calc(100%/3);
+    cursor: pointer;
+}
+
+span {
+    position: absolute;
+    font-size: 200px;
+}
+
+
