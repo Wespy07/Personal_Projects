@@ -118,7 +118,7 @@ main {
     font-size: 20px;
     color: white;
     cursor: pointer;
-    animation: rotateFrame 0.5s linear infinite;
+    animation: rotateFrame 0.4s linear infinite;
 }
 
 .bubble:hover {
@@ -133,6 +133,15 @@ main {
 .max-score{
     display: block;
     font-size: 16px;
+}
+
+@keyframes rotateFrame{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
 }
 
 @media screen and (max-width: 880px){

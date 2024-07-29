@@ -62,7 +62,7 @@ function startTheGame() {
 
 
     // timer generator function
-    const initialTimerValue = 50
+    const initialTimerValue = 60
     timerNumber.innerHTML = initialTimerValue
     let timerValue = initialTimerValue
 
