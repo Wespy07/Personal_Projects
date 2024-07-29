@@ -6,20 +6,22 @@
 }
 
 body {
+    overflow: hidden;
     background-color: #15160cc4;
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 
-main{
+main {
     overflow: hidden;
     height: 80vh;
     width: 75vw;
     background-color: #424242;
-    border-radius: 10px ;
+    border-radius: 10px;
 }
 
 .head {
@@ -31,17 +33,75 @@ main{
     background-color: #303030;
     color: white;
     font-size: 24px;
+
 }
-.head span{
+
+.head span {
     background-color: rgba(39, 177, 69, 0.651);
     padding: 8px 12px;
     border-radius: 5px;
     font-size: inherit;
 }
+
+
+.startup-page {
+    height: 100%;
+    width: 50%;
+    margin: auto;
+    /* background-color: rgb(46, 22, 26); */
+    color: white;
+}
+
+.startup-page h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    color: rgba(10, 172, 45, 0.774);
+
+}
+
+.startup-page ul {
+    margin-top: 12px;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+}
+
+.startup-page h4 {
+    font-size: 22px;
+    color: rgba(7, 201, 49, 0.77);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.btn button, .reset-btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: green;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-weight: 800;
+    font-size: 16px;
+}
+
+.btn button:hover, .reset-btn:hover {
+    background-color: rgba(6, 117, 6, 0.829);
+}
+
 .bubble-box {
     height: calc(100% - 14%);
     padding: 16px;
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     flex-wrap: wrap;
@@ -58,7 +118,44 @@ main{
     font-size: 20px;
     color: white;
     cursor: pointer;
+    animation: rotateFrame 0.5s linear infinite;
 }
-.bubble:hover{
+
+.bubble:hover {
     background-color: rgba(20, 94, 36, 0.774);
+}
+
+.bubble-box.game-over {
+    width: 100%;
+    font-size: 56px;
+    color: rgb(236, 193, 113);
+}
+.max-score{
+    display: block;
+    font-size: 16px;
+}
+
+@media screen and (max-width: 880px){
+    .head{
+        font-size: 12px;
+    }
+    .startup-page {
+        width: 90%;
+    }
+    .startup-page h2 {
+        font-size: 28px;
+    }
+    .startup-page h4{
+        font-size: 18px;
+    }
+    .startup-page ul{
+        font-size: 12px;
+    }
+    .bubble-boxP{
+        font-size: 8px;
+    }
+    .bubble{
+        height: 28px;
+        width: 28px;
+    }
 }
