@@ -11,4 +11,5 @@ These are some of my personal web-dev projects to test and practice my skills in
 - Live site: [Click here](https://wespycountries.netlify.app)
 #
 ### 3.) Bubble Trouble
-- Work in progress.
+- Match bubbles to the displayed random number within 60 seconds to score points in this interactive game made using HTML, CSS and JavaScript.
+- Live site: [Click here](https://wespybubbletrouble.netlify.app/)
