@@ -84,8 +84,7 @@ function startTheGame() {
             bubbleBox.removeEventListener('click', bubbleHandler)
             bubbleBox.appendChild(resetBtn)
             hitNumber.innerHTML = 0
-            // console.log(typeof scoreNumber.innerHTML);
-            // console.log(scoreNumber.innerHTML)
+            // console.log(typeof scoreNumber.innerHTML, scoreNumber.innerHTML);
             if (localStorage.getItem('maxScore')) {
                 const userMaxScore = localStorage.getItem('maxScore')
                 if (+scoreNumber.innerHTML > userMaxScore) {
