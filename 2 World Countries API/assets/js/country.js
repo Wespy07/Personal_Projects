@@ -103,15 +103,15 @@ backBtn.addEventListener('click', () => {
     window.history.go(-1)
 })
 
-darkModeBtn.addEventListener('click', () => {
-    body.classList.toggle('dark-mode');
-    if (body.classList.contains('dark-mode')) {
-        moon.style.display = 'none';
-        darkModeText.innerHTML = 'Light Mode';
-        sun.style.display = 'inline';
-    } else {
-        moon.style.display = 'inline';
-        sun.style.display = 'none';
-        darkModeText.innerHTML = 'Dark Mode';
-    }
-});
+// darkModeBtn.addEventListener('click', () => {
+//     body.classList.toggle('dark-mode');
+//     if (body.classList.contains('dark-mode')) {
+//         moon.style.display = 'none';
+//         darkModeText.innerHTML = 'Light Mode';
+//         sun.style.display = 'inline';
+//     } else {
+//         moon.style.display = 'inline';
+//         sun.style.display = 'none';
+//         darkModeText.innerHTML = 'Dark Mode';
+//     }
+// });
