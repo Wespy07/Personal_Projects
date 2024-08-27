@@ -13,3 +13,7 @@ These are some of my personal web-dev projects to test and practice my skills in
 ### 3.) Bubble Trouble
 - Match bubbles to the displayed random number within 60 seconds to score points in this interactive game made using HTML, CSS and JavaScript.
 - Live site: [Click here](https://wespybubbletrouble.netlify.app/)
+#
+### 4.) Tic Tac toe
+- This is a classic two-player Tic Tac Toe game made using HTML, CSS, and JavaScript, featuring turn-based gameplay and a reset option.
+- Live site: [Click here](https://wespytictactoe.netlify.app/)
