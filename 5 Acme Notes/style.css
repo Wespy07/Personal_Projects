@@ -26,7 +26,7 @@
     width: 100%;
 }
 
-button:hover i {
+button:hover .fa-arrow-right {
     animation: rotateThenMove 0.4s ease forwards;
 }
 
@@ -42,4 +42,9 @@ button:hover i {
     100% {
         transform: rotate(360deg) translateX(5px);
     }
+}
+
+button:hover .fa-angle-right{
+    transform: translateX(15px);
+    transition: all 0.3s linear;
 }

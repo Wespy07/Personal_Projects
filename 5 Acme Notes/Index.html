@@ -16,8 +16,8 @@
 <body class=" bg-[#000212] text-white font-poppins">
 
     <header
-        class="max-w-[1000px] border-primary border-b-[1px] h-[12vh] mx-auto flex justify-between items-center px-10">
-        <nav class="flex justify-between w-full items-center ">
+        class="fixed top-0 w-full bg-[#000212e5] left-[50%] translate-x-[-50%] max-w-[1000px] border-primary border-b-[1px] h-[12vh] mx-auto flex justify-between items-center px-10">
+        <nav class="flex justify-between w-full items-center navbar">
             <div
                 class="left flex justify-center items-center hover:text-hover cursor-pointer transition-colors duration-300">
                 <img src="./assets/logo.svg" alt="acme logo" class="w-9 brightness-200">
@@ -29,22 +29,28 @@
                 <a class="underline-hover duration-300" href="#">Features</a>
                 <a class="underline-hover duration-300" href="#">About</a>
                 <button
-                    class="items-center inline-flex rounded-lg border-2 px-2 py-[4px]">Get Started &nbsp;<i class="fa-solid fa-arrow-right "></i>
+                    class="items-center inline-flex rounded-lg border-2 px-2 py-[4px]">Get Started &nbsp;<i class="fa-solid fa-arrow-right"></i>
                 </button>             
                 
             </div>
         </nav>
     </header>
 
-    <main class="max-w-[1000px] mx-auto h-[83vh] mt-[2vh] flex justify-center items-center">
+    <main class="max-w-[1000px] mx-auto min-h-[690px] mt-[10vh] flex justify-center items-center">
 
-        <div class="text-center">
-            <h1 class="text-[72px] font-semibold "><span class="">It's time</span> <br> convert ideas into actions.</h1>
-            
+        <div class="text-center mt-5">
+            <h1 class="text-[72px] font-semibold leading-none"><span class="text-[#9753eb]">It's time</span> <br> convert ideas into actions.</h1>
+            <p class="mt-7 text-gray-400">Effortlessly organize your thoughts, ideas, and tasks with <br>Acme Notes - the intuitive <span class="text-[#9753eb]">note-taking app</span> designed for productivity.</p>
+
+            <button class="mt-12 border-[1px] px-[70px] text-2xl py-7 rounded-full flex justify-center items-center mx-auto">Get Started &nbsp;&nbsp; <i class="fa-solid fa-angle-right"></i></button>
         </div>
 
     </main>
-
+    
+    <section class="max-w-[1000px] mx-auto h-[83vh] mt-0 flex flex-col justify-start items-center">
+        <h2 class="text-[64px] font-medium">Welcome to Acme Notes!</h2>
+        <img src="./assets/Images/Featured/1.webp" alt="home app" class="w-1/2">
+    </section>
 </body>
 
 </html>
