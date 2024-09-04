@@ -25,6 +25,13 @@
 .underline-hover:hover::after {
     width: 100%;
 }
+.main-btn{
+    transition: all 0.3s;
+}
+.main-btn:hover{
+    box-shadow: inset -1px -1px 20px 8px rebeccapurple;
+    border: 1px solid rebeccapurple;
+}
 
 button:hover .fa-arrow-right {
     animation: rotateThenMove 0.4s ease forwards;
@@ -45,6 +52,11 @@ button:hover .fa-arrow-right {
 }
 
 button:hover .fa-angle-right{
-    transform: translateX(15px);
-    transition: all 0.3s linear;
+    transform: translateX(30px);
+    transition: all 0.25s linear;
+}
+
+.welcome-box{
+    padding: 15px;
+    box-shadow: -7px -6px 11px 0px rebeccapurple, 3px 3px 11px 0px #01ee91;
 }

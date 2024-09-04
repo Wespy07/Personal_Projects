@@ -16,7 +16,7 @@
 <body class=" bg-[#000212] text-white font-poppins">
 
     <header
-        class="fixed top-0 w-full bg-[#000212e5] left-[50%] translate-x-[-50%] max-w-[1000px] border-primary border-b-[1px] h-[12vh] mx-auto flex justify-between items-center px-10">
+        class="fixed top-0 w-full bg-[#000212] left-[50%] translate-x-[-50%] max-w-[1000px] border-primary border-b-[1px] h-[12vh] mx-auto flex justify-between items-center px-10">
         <nav class="flex justify-between w-full items-center navbar">
             <div
                 class="left flex justify-center items-center hover:text-hover cursor-pointer transition-colors duration-300">
@@ -28,10 +28,10 @@
                 <a class="underline-hover duration-300" href="#">Home</a>
                 <a class="underline-hover duration-300" href="#">Features</a>
                 <a class="underline-hover duration-300" href="#">About</a>
-                <button
-                    class="items-center inline-flex rounded-lg border-2 px-2 py-[4px]">Get Started &nbsp;<i class="fa-solid fa-arrow-right"></i>
-                </button>             
-                
+                <button class="items-center inline-flex rounded-lg border-[1px] px-3 py-[6px]">Get Started &nbsp;<i
+                        class="fa-solid fa-arrow-right"></i>
+                </button>
+
             </div>
         </nav>
     </header>
@@ -39,17 +39,83 @@
     <main class="max-w-[1000px] mx-auto min-h-[690px] mt-[10vh] flex justify-center items-center">
 
         <div class="text-center mt-5">
-            <h1 class="text-[72px] font-semibold leading-none"><span class="text-[#9753eb]">It's time</span> <br> convert ideas into actions.</h1>
-            <p class="mt-7 text-gray-400">Effortlessly organize your thoughts, ideas, and tasks with <br>Acme Notes - the intuitive <span class="text-[#9753eb]">note-taking app</span> designed for productivity.</p>
+            <h1 class="text-[72px] font-semibold leading-none"><span class="text-[#9753eb]">It's time</span> <br>
+                convert ideas into actions.</h1>
+            <p class="mt-7 text-gray-400">Effortlessly organize your thoughts, ideas, and tasks with <br>Acme Notes -
+                the intuitive <span class="text-[#9753eb]">note-taking app</span> designed for productivity.</p>
 
-            <button class="mt-12 border-[1px] px-[70px] text-2xl py-7 rounded-full flex justify-center items-center mx-auto">Get Started &nbsp;&nbsp; <i class="fa-solid fa-angle-right"></i></button>
+            <button
+                class="mt-12 border-[1px] px-[70px] text-2xl py-7 rounded-full flex justify-center items-center mx-auto main-btn">Get
+                Started &nbsp;&nbsp; <i class="fa-solid fa-angle-right"></i></button>
         </div>
 
     </main>
-    
+
     <section class="max-w-[1000px] mx-auto h-[83vh] mt-0 flex flex-col justify-start items-center">
-        <h2 class="text-[64px] font-medium">Welcome to Acme Notes!</h2>
-        <img src="./assets/Images/Featured/1.webp" alt="home app" class="w-1/2">
+        <!-- <h2 class="text-[64px] font-medium">Welcome to Acme Notes!</h2> -->
+        <div class="flex items-center gap-10">
+            <img src="./assets/Images/Featured/1.webp" alt="home app" class="w-4/5 rounded-md">
+            <p class="welcome-box text-xl">The <br> <span class="text-primary font-semibold">only</span><br> note <br>
+                taking <br> app <br> you <br> will <br> ever <br> need.</p>
+        </div>
+    </section>
+
+    <!-- <div class="max-w-[1000px] h-[1px] border-b-[1px] mx-auto mt-16 mb-10 border-secondary"></div> -->
+
+    <section class="max-w-[1000px] mx-auto h-[83vh] mt-28">
+        <div class="flex">
+            <aside>
+                <div
+                    class="w-full text-center border-gray-500 hover:bg-[#27272796] cursor-pointer px-2 pb-5 rounded-md transition-all duration-300">
+                    <img src="./assets/Images/Featured/2.webp" class="w-full my-3">
+                    <h3 class="text-lg font-medium">Seamless Cloud Sync</h3>
+                    <p class="text-gray-500 text-sm">Sync your data with the cloud and access it anywhere, on any
+                        device. Never worry about losing your notes again.</p>
+                </div>
+                <div
+                    class="w-full text-center border-gray-500 hover:bg-[#27272796] cursor-pointer px-2 pb-5 transition-all duration-300 rounded-md">
+                    <img src="./assets/Images/Featured/3.webp" class="w-full my-3 rounded-md">
+                    <h3 class="text-lg font-medium">Boost your productivity</h3>
+                    <p class="text-gray-500 text-sm">Get things done faster with Acme Note's lightning fast performance
+                        and intuitive interface. Spend less time waiting and more time being productive</p>
+                </div>
+            </aside>
+
+            <div class="text-center">
+                <h2 class="text-6xl my-[80px] font-medium">Features</h2>
+                <div
+                    class="w-full text-center border-gray-500 hover:bg-[#27272796] cursor-pointer px-2 pb-5 transition-all duration-300 rounded-md">
+                    <img src="./assets/Images/Featured/4.webp" class="w-full my-3 rounded-md">
+                    <h3 class="text-lg font-medium">Effortless search</h3>
+                    <p class="text-gray-500 text-sm">Find you data quickly and easily with Acme Note's powerful search
+                        feature. Never lose a note again.</p>
+                </div>
+            </div>
+
+            <aside>
+                <div
+                    class="w-full text-center border-gray-500 hover:bg-[#27272796] cursor-pointer px-2 pb-5 transition-all duration-300 rounded-md">
+                    <img src="./assets/Images/Featured/5.webp" class="w-full my-3 rounded-md">
+                    <h3 class="text-lg font-medium">Type less, do more</h3>
+                    <p class="text-gray-500 text-sm">Simplify your workflow with user friendly shortcuts and commands.
+                        Focus on what matters the most and let Acme Note handle the rest.</p>
+                </div>
+                <div
+                    class="w-full text-center border-gray-500 hover:bg-[#27272796] cursor-pointer px-2 pb-5 transition-all duration-300 rounded-md">
+                    <img src="./assets/Images/Featured/6.webp" class="w-full my-3 rounded-md">
+                    <h3 class="text-lg font-medium">Win it with widgets</h3>
+                    <p class="text-gray-500 text-sm">Stay on top of your tasks and notes with Acme Note's powerful
+                        widgets. Keep your most important data at your fingertips.</p>
+                </div>
+            </aside>
+        </div>
+        <div class="max-w-[1000px] mx-auto flex items-center justify-start gap-7 border-gray-500 hover:bg-[#27272796] cursor-pointer px-2 pb-5 transition-all duration-300 rounded-md">
+            <img src="./assets/Images/Featured/6.webp" class="w-2/3 my-3 rounded-md">
+            <div class="w-1/4">
+                <h3 class="text-lg font-medium my-2">Win it with widgets</h3>
+                <p class="text-gray-500 text-sm">Stay on top of your tasks and notes with Acme Note's powerful widgets.Keep your most important data at your fingertips.</p>
+            </div>
+        </div>
     </section>
 </body>
 
