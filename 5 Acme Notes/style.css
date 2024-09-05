@@ -10,6 +10,18 @@ html{
     scroll-behavior: smooth;
 }
 
+body {
+    background-image: url('./assets/Images/backdrop2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 100vh; 
+}
+
+.started{
+    background-color: #000212;
+}
+
 .underline-hover {
     position: relative;
     text-decoration: none;
