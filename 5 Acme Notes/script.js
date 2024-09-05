@@ -1,23 +1,29 @@
 const logo = document.getElementById('logo-text')
+const scrollToTop = document.getElementById('scrollToTopBtn');
+const menu = document.getElementById('menu')
 
 logo.addEventListener('click', () => {
     window.scrollTo(0, 0)
 })
 
-
-const scrollToTopBtn = document.getElementById('scrollToTopBtn');
-
 window.addEventListener('scroll', () => {
     if (window.scrollY > 900) {
-        scrollToTopBtn.style.display = 'block';
+        scrollToTop.style.display = 'block';
     } else {
-        scrollToTopBtn.style.display = 'none';
+        scrollToTop.style.display = 'none';
     }
 });
 
-scrollToTopBtn.addEventListener('click', () => {
+scrollToTop.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
     });
 });
+
+
+
+function toggleMenu(){
+    menu.classList.toggle('hidden')
+
+}
