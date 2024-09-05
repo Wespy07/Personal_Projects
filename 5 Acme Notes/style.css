@@ -6,6 +6,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+    scroll-behavior: smooth;
+}
+
 .underline-hover {
     position: relative;
     text-decoration: none;
@@ -25,12 +29,18 @@
 .underline-hover:hover::after {
     width: 100%;
 }
-.main-btn{
+
+.main-btn {
     transition: all 0.3s;
 }
-.main-btn:hover{
+
+.main-btn:hover {
     box-shadow: inset -1px -1px 20px 8px rebeccapurple;
     border: 1px solid rebeccapurple;
+}
+
+.quote-box {
+    box-shadow: 0px 1px 13px 5px #d06bda;
 }
 
 button:hover .fa-arrow-right {
@@ -51,12 +61,23 @@ button:hover .fa-arrow-right {
     }
 }
 
-button:hover .fa-angle-right{
+button:hover .fa-angle-right {
     transform: translateX(30px);
     transition: all 0.25s linear;
 }
 
-.welcome-box{
+.welcome-box {
     padding: 15px;
     box-shadow: -7px -6px 11px 0px rebeccapurple, 3px 3px 11px 0px #01ee91;
+}
+
+.review-box{
+    background: radial-gradient(circle, #272750, #000212);
+}
+.bottom-logo{
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.bottom-logo:hover{
+    filter: drop-shadow(0px 0px 33px #ee0181) brightness(2)
 }
