@@ -1196,6 +1196,31 @@ button:hover .fa-angle-right {
   filter: drop-shadow(0px 0px 33px #ee0181) brightness(2)
 }
 
+.scroll-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  display: none;
+  background-color: rebeccapurple;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1000;
+  transition: opacity 0.3s ease;
+}
+
+.scroll-to-top:hover {
+  background-color: #7f44b9;
+}
+
 .hover\:bg-\[\#27272796\]:hover{
   background-color: #27272796;
 }
