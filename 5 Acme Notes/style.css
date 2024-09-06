@@ -21,6 +21,10 @@ html{
     cursor: default;
 }
 
+.hero-img{
+    box-shadow: 20px 0px 20px 8px #883aea, -23px 0px 20px 8px #a12345;
+}
+
 .started{
     background-color: #000212;
 }

@@ -11,6 +11,11 @@ module.exports = {
       fontFamily: {
         'poppins' : ['Poppins', 'sans-serif'],
         'round' : ["Varela Round", 'system-ui']
+      },
+      screens:{
+        'max-md': {'max' : '767px'},
+        'max-sm': {'max' : '640px'},
+        'max-lg': {'max' : '1024px'}
       }
     },
   },

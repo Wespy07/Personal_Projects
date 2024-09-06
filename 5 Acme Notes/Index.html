@@ -15,6 +15,7 @@
 
 <body class="bg-[#000212] text-white font-poppins">
 
+    <!-- Header starts here -->
     <header
         class="fixed top-0 w-full bg-[#080912] left-[50%] translate-x-[-50%] h-[80px] mx-auto flex justify-between items-center px-10 z-20">
         <nav
@@ -38,9 +39,9 @@
 
 
         </nav>
-    </header>
+    </header> 
 
-
+    <!-- mobile navbar -->
     <div id="menu" class="hidden fixed bg-[#000212] inset-0 md:hidden" style="z-index: 500;">
         <header
             class="fixed top-0 w-full bg-[#080912] left-[50%] translate-x-[-50%] h-[80px] mx-auto flex justify-between items-center px-10 z-20">
@@ -64,70 +65,76 @@
 
     <main>
         <div class="max-w-[1000px] mx-auto min-h-[690px] mt-[10vh] flex justify-center items-center hero-section">
-
+    <!-- hero section starts here -->
             <div class="text-center mt-5">
-                <h1 class="text-[72px] font-semibold leading-none"><span class="text-[#9753eb]">It's time</span>
-                    <br>to convert ideas into actions.
+                <h1 class="max-md:text-[48px] text-[64px] font-semibold leading-none"><span class="text-[#9753eb]">It's
+                        time</span> <br><span>to convert ideas into actions.</span>
                 </h1>
-                <p class="mt-7 text-gray-400">Effortlessly organize your thoughts, ideas, and tasks with <br>Acme Notes - the intuitive <span class="text-[#9753eb]">note-taking app</span> designed for productivity.</p>
+                <p class="max-md:text-[13px] max-md:w-3/4 mt-7 text-gray-400 w-1/2 mx-auto">Effortlessly organize your
+                    thoughts, ideas, and tasks with Acme Notes, the intuitive <span class="text-[#9753eb]">note-taking
+                        app</span> designed for productivity.</p>
 
                 <button
-                    class="mt-12 border-[1px] px-[70px] text-2xl py-7 rounded-full flex justify-center items-center mx-auto main-btn">Get
+                    class="max-md:text-xl max-md:px-12 max-md:py-5 mt-12 border-[1px] px-[70px] text-2xl py-7 rounded-full flex justify-center items-center mx-auto main-btn">Get
                     Started &nbsp;&nbsp; <i class="fa-solid fa-angle-right"></i></button>
             </div>
 
         </div>
-
-        <section class="max-w-[1000px] mx-auto max-h-[83vh] mt-10 flex flex-col justify-start items-center">
+    <!-- hero image -->
+        <section class="max-md:m-2 max-w-[1000px] mx-auto max-h-[83vh] mt-10 flex flex-col justify-start items-center">
             <div class="flex items-center justify-center gap-10">
-                <img src="./assets/Images/Featured/1.webp" alt="home app" class="w-full rounded-md">
+                <img src="./assets/Images/Featured/1.webp" alt="home app" class="w-full rounded-md hero-img">
             </div>
         </section>
 
-        <!-- <div class="max-w-[1000px] h-[1px] border-b-[1px] mx-auto mt-16 mb-10 border-secondary"></div> -->
-
+        <!-- features section -->
         <section id="features" class="max-w-[1000px] mx-auto h-[83vh] mt-28">
-            <div class="flex">
-                <div>
+            <div class="flex max-md:grid">
+                <div class="max-md: order-2">
                     <div class="w-full text-center border-gray-500 px-2 pb-5 rounded-md transition-all duration-300">
                         <img src="./assets/Images/Featured/2.webp" class="w-full my-3">
                         <h3 class="text-lg font-medium">Seamless Cloud Sync</h3>
-                        <p class="text-gray-500 text-sm">Sync your data with the cloud and access it anywhere, on any
-                            device. Never worry about losing your notes again.</p>
+                        <p class="text-gray-500 text-sm">Sync your data with the cloud and access it anywhere, on any device. Never worry about losing your notes again.</p>
                     </div>
                     <div class="w-full text-center border-gray-500 px-2 pb-5 transition-all duration-300 rounded-md">
                         <img src="./assets/Images/Featured/3.webp" class="w-full my-3 rounded-md">
                         <h3 class="text-lg font-medium">Boost your productivity</h3>
-                        <p class="text-gray-500 text-sm">Get things done faster with Acme Note's lightning fast
-                            performance and intuitive interface. Spend less time waiting and more time being productive
+                        <p class="text-gray-500 text-sm">Get things done faster with Acme Note's lightning fast performance and intuitive interface. Spend less time waiting and more time being productive
                         </p>
                     </div>
                 </div>
 
-                <div class="text-center">
-                    <h2 class="text-6xl my-[80px] font-medium">Features</h2>
-                    <div class="w-full text-center border-gray-500 px-2 pb-5 transition-all duration-300 rounded-md">
-                        <img src="./assets/Images/Featured/4.webp" class="w-full my-3 rounded-md">
-                        <h3 class="text-lg font-medium">Effortless search</h3>
-                        <p class="text-gray-500 text-sm">Find you data quickly and easily with Acme Note's powerful
-                            search
-                            feature. Never lose a note again.</p>
+                <div class="max-md: order-1 features w-full">
+                    <div class="text-center">
+                        <h2 class="text-6xl my-[80px] font-medium">Features</h2>
+                        <div
+                            class="w-full text-center border-gray-500 px-2 pb-5 transition-all duration-300 rounded-md">
+                            <img src="./assets/Images/Featured/4.webp" class="w-full my-3 rounded-md">
+                            <h3 class="text-lg font-medium">Effortless search</h3>
+                            <p class="text-gray-500 text-sm">Find you data quickly and easily with Acme Note's
+                                powerful
+                                search
+                                feature. Never lose a note again.</p>
+                        </div>
                     </div>
-                </div>
 
-                <div>
-                    <div class="w-full text-center border-gray-500 px-2 pb-5 transition-all duration-300 rounded-md">
-                        <img src="./assets/Images/Featured/5.webp" class="w-full my-3 rounded-md">
-                        <h3 class="text-lg font-medium">Type less, do more</h3>
-                        <p class="text-gray-500 text-sm">Simplify your workflow with user friendly shortcuts and
-                            commands.
-                            Focus on what matters the most and let Acme Note handle the rest.</p>
-                    </div>
-                    <div class="w-full text-center border-gray-500 px-2 pb-5 transition-all duration-300 rounded-md">
-                        <img src="./assets/Images/Featured/6.webp" class="w-full my-3 rounded-md">
-                        <h3 class="text-lg font-medium">Win it with widgets</h3>
-                        <p class="text-gray-500 text-sm">Stay on top of your tasks and notes with Acme Note's powerful
-                            widgets. Keep your most important data at your fingertips.</p>
+                    <div>
+                        <div
+                            class="w-full text-center border-gray-500 px-2 pb-5 transition-all duration-300 rounded-md">
+                            <img src="./assets/Images/Featured/5.webp" class="w-full my-3 rounded-md">
+                            <h3 class="text-lg font-medium">Type less, do more</h3>
+                            <p class="text-gray-500 text-sm">Simplify your workflow with user friendly shortcuts and
+                                commands.
+                                Focus on what matters the most and let Acme Note handle the rest.</p>
+                        </div>
+                        <div
+                            class="w-full text-center border-gray-500 px-2 pb-5 transition-all duration-300 rounded-md">
+                            <img src="./assets/Images/Featured/6.webp" class="w-full my-3 rounded-md">
+                            <h3 class="text-lg font-medium">Win it with widgets</h3>
+                            <p class="text-gray-500 text-sm">Stay on top of your tasks and notes with Acme Note's
+                                powerful
+                                widgets. Keep your most important data at your fingertips.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,19 +144,19 @@
             </div>
 
             <div
-                class="max-w-[1000px] border-[1px] mx-auto mt-16 border-[#d06bda] rounded-lg flex justify-center items-center text-center py-8">
-                <section class="w-2/3">
-                    <h3 class="text-gray-200 text-xl">“As someone in tech, every minute counts. Acme notes gives me
-                        focus
-                        blocks, optimizes meeting times, and even lets my family know when to message me. It's a
-                        game-changer, saving me 2+ hours weekly, and that's not counting the distraction-free time.”
+                class="max-md:m-2 max-w-[1000px] border-[1px] mx-auto mt-16 border-[#d06bda] rounded-lg flex justify-center items-center text-center py-8">
+                <section class="max-md:w-full w-2/3">
+                    <h3 class="text-gray-200 text-xl max-md:w-5/6 max-md:text-start max-md:mx-auto max-md:text-sm">
+                        “As someone in tech, every minute counts. Acme notes gives me focus blocks, optimizes
+                        meeting times, and even lets my family know when to message me. It's a game-changer, saving
+                        me 2+ hours weekly, and that's not counting the distraction-free time.”
                     </h3>
-                    <div class="flex justify-center items-center mt-7">
+                    <div class="max-md:w-5/6 flex justify-center items-center mt-7">
                         <img src="./assets/Images/testimonial.Rl0mCdRd_Z1xqqAx.webp"
-                            class="w-14 rounded-full border-white border-2">
+                            class="max-md:w-12 w-14 rounded-full border-white border-2">
                         <div class="text-left ml-2">
-                            <h3 class="text-gray-300">John Doe</h3>
-                            <p id="about" class="text-gray-400">Head of Data, Google</p>
+                            <h3 class="text-gray-300 max-md:text-[18px]">John Doe</h3>
+                            <p id="about" class="text-gray-400 max-md:text-sm">Head of Data, Google</p>
                         </div>
                     </div>
                 </section>
@@ -158,51 +165,56 @@
             <div class="my-28 max-w-[450px] mx-auto text-center">
                 <h3 class="text-4xl font-bold mb-2">Read all about it</h3>
                 <p id="reviews" class="text-base text-gray-500 leading-5">Honored twice with the prestigious Apple
-                    Design Award, Acme Notes has won over critics with its unique blend of powerful functionality and
+                    Design Award, Acme Notes has won over critics with its unique blend of powerful functionality
+                    and
                     ease-of-use. Here's what they have to say.</p>
             </div>
 
-            <div>
+            <div class="max-md:m-2">
                 <div class="mt-28 max-w-[450px] mx-auto text-center">
                     <h3 class="text-4xl font-bold mb-5">Reviews</h3>
                 </div>
 
-                <div class="w-full flex flex-wrap justify-center gap-5">
+                <div class="max-md:grid w-full flex flex-wrap justify-center gap-5">
                     <div
-                        class="w-1/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
-                        <p>A joy to use and beautiful to look at, Acme notes has been completely re-imagined to improve
-                            efficiency. Its thoughtful design and powerful features help you get organized and make the
-                            most out of every day. Acme notes sets the standard for how apps should be designed and
-                            developed to be their best on every device.
-                            <img src="https://www.svgrepo.com/show/303216/ernst-young-ey-logo.svg"
-                                class="w-12 absolute right-3 bottom-3 rotate-[-13deg]">
+                        class="max-md:w-full max-md:text-sm w-1/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
+                        <p>A joy to use and beautiful to look at, Acme notes has been completely re-imagined to
+                            improve efficiency. Its thoughtful design and powerful features help you get organized
+                            and make the most out of every day. Acme notes sets the standard for how apps should be
+                            designed and developed to be their best on every device.
+                            <img src="https://www.svgrepo.com/show/303114/facebook-3-logo.svg"
+                                class="max-md:bottom-[-10px] max-md:w-10 max-md:right-[-10px] w-12 absolute right-3 bottom-3 rotate-[-13deg]">
                         </p>
                     </div>
 
                     <div
-                        class="w-1/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
-                        <p>Acme notes has an amazing design and aesthetic, and a ton of powerful new features that tie
+                        class="max-md:w-full max-md:text-sm w-1/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
+                        <p>Acme notes has an amazing design and aesthetic, and a ton of powerful new features that
+                            tie
                             it all together. It's hard for me to resist when something looks this good yet still
                             functions properly.
                             <img src="https://www.svgrepo.com/show/303125/apple-logo.svg"
-                                class="w-12 absolute right-3 bottom-3 rotate-[10deg]">
+                                class="max-md:bottom-[-10px] max-md:w-10 max-md:right-[-10px] w-12 absolute right-3 bottom-3 rotate-[10deg]">
                         </p>
                     </div>
 
                     <div
-                        class="w-2/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
-                        <p>Acme notes is the best task management app out there. It is simple and easy to use, and it
-                            has a beautiful design. While being powerful enough for even the most detailed and organized
+                        class="max-md:w-full max-md:text-sm w-2/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
+                        <p>Acme notes is the best task management app out there. It is simple and easy to use, and
+                            it
+                            has a beautiful design. While being powerful enough for even the most detailed and
+                            organized
                             power user, it is also simple enough for the rest of us.
                             <img src="https://www.svgrepo.com/show/303108/google-icon-logo.svg"
-                                class="w-12 absolute right-3 bottom-0 rotate-[-20deg]">
+                                class="max-md:bottom-[-10px] max-md:w-10 max-md:right-[-10px] w-12 absolute right-3 bottom-0 rotate-[-20deg]">
                         </p>
                     </div>
 
                     <div
-                        class="w-2/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
+                        class="max-md:w-full max-md:text-sm w-2/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
                         <p>For pushing the iPad down a path untraveled by other apps, and making us dream of an iOS
-                            experience that's fully keyboard-optimized, Acme notes.6 is the MacStories Selects “Best App
+                            experience that's fully keyboard-optimized, Acme notes.6 is the MacStories Selects “Best
+                            App
                             Update” of 2018.
                             <img src="https://culturedcode.com/things/2024-01-20/images/nicequote-logo-macstories.svg"
                                 class="w-24 absolute right-3 bottom-3 rotate-[-20deg]">
@@ -210,52 +222,58 @@
                     </div>
 
                     <div
-                        class="w-1/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
-                        <p>Acme notes offers the best combination of design and functionality of any app we tested, with
+                        class="max-md:w-full max-md:text-sm w-1/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
+                        <p>Acme notes offers the best combination of design and functionality of any app we tested,
+                            with
                             nearly all the features of other power user applications and a delightful interface that
                             never gets in the way of your work.
                             <img src="https://www.svgrepo.com/show/303123/bmw-logo.svg"
-                                class="w-12 absolute right-3 bottom-3 rotate-[-13deg]">
+                                class="max-md:bottom-[-10px] max-md:w-10 max-md:right-[-10px] w-12 absolute right-3 bottom-3 rotate-[-13deg]">
                         </p>
                     </div>
 
                     <div
-                        class="w-1/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
-                        <p>While the app immediately clicked, and was at once dead simple to get started in, it's taken
-                            me quite a while to realize what actually makes it so good. It was simply designed with the
-                            understanding that real people are going to be using it for real life. What an amazing piece
+                        class="max-md:w-full max-md:text-sm w-1/3 border-[1px] border-gray-600 rounded-md p-4 text-lg relative text-gray-300 review-box">
+                        <p>While the app immediately clicked, and was at once dead simple to get started in, it's
+                            taken
+                            me quite a while to realize what actually makes it so good. It was simply designed with
+                            the
+                            understanding that real people are going to be using it for real life. What an amazing
+                            piece
                             of software.
                             <img src="https://www.svgrepo.com/show/303249/mercedes-benz-9-logo.svg"
-                                class="w-12 absolute right-3 bottom-3 rotate-[10deg]">
+                                class="max-md:bottom-[-10px] max-md:w-10 max-md:right-[-10px] w-12 absolute right-3 bottom-3 rotate-[10deg]">
                         </p>
                     </div>
                 </div>
 
             </div>
 
-            <div class="max-w-[1000px] mx-auto min-h-[690px] mt-[10vh] flex justify-center items-center">
+            <div
+                class="max-md:min-h-[15vh] max-md:mb-12 max-w-[1000px] mx-auto min-h-[690px] mt-[10vh] flex justify-center items-center">
 
                 <div class="text-center mt-5 flex flex-col items-center">
-                    <img src="./assets/logo.svg" class="w-1/5 mb-10 bottom-logo">
-                    <h1 class="text-[72px] font-semibold leading-none">Built for the future.<br><span
-                            class="text-[#9753eb]">Available today.</span></h1>
-                    <p class="mt-7 text-gray-400">The next generation of notes.</p>
+                    <img src="./assets/logo.svg" class="w-1/5 mb-10 bottom-logo max-md:w-1/3">
+                    <h1 class="max-md:text-[32px] text-[72px] font-semibold leading-none">Built for the
+                        future.<br><span class="text-[#9753eb]">Available today.</span></h1>
+                    <p class="max-md:text-[14px] mt-7 text-gray-400">The next generation of notes.</p>
 
                     <button
-                        class="mt-12 border-[1px] px-[70px] text-2xl py-7 rounded-full flex justify-center items-center mx-auto main-btn">Try
+                        class="max-md:text-xl max-md:px-12 max-md:py-5 mt-12 border-[1px] px-[70px] text-2xl py-7 rounded-full flex justify-center items-center mx-auto main-btn">Try
                         now for free &nbsp;&nbsp; <i class="fa-solid fa-angle-right"></i></button>
                 </div>
 
             </div>
             <footer
                 class="w-full mx-auto h-[50vh] review-box border-y-[1px] border-gray-600 flex flex-col text-center justify-center items-center">
-                <div class="w-2/3">
+                <div class="max-md:w-full w-2/3">
                     <h4 class="text-2xl">Get more updates</h4>
-                    <p class="text-gray-400 mt-3">Subscribe to our newsletter to stay up-to-date on latest news. We only
-                        send it out a few times per year when we have something interesting to tell you.</p>
+                    <p class="max-md:text-xs max-md:w-2/3 max-md:mx-auto text-gray-400 mt-3">Subscribe to our
+                        newsletter to stay up-to-date on latest news. We only send it out a few times per year when
+                        we have something interesting to tell you.</p>
 
                     <div class="flex items-center justify-center gap-3 mt-5">
-                        <input type="text" class="bg-transparent border-[1px] rounded-full px-4 py-2"
+                        <input type="text" class="max-md:w-2/3 bg-transparent border-[1px] rounded-full px-4 py-2"
                             placeholder="me@example.com">
                         <button class="border-[1px] px-[13px] text-sm py-[8px] rounded-full">Submit</button>
                     </div>
@@ -263,14 +281,14 @@
 
             </footer>
 
-            <div class="w-full flex justify-between mt-7 text-sm">
+            <div class="max-md:grid max-md:gap-3 max-md:m-5 w-full flex justify-between mt-7 text-sm">
                 <div
                     class="w-1/2 left flex justify-start items-center hover:text-hover cursor-pointer transition-colors duration-300">
                     <img src="./assets/logo.svg" alt="acme logo" class="w-7 brightness-200">
-                    <p class="text-xl font-extrabold px-2 ">Acme notes</p>
+                    <p class="text-xl font-extrabold px-2 max-md:text-sm">Acme notes</p>
                 </div>
 
-                <div class="flex justify-end gap-5">
+                <div class="max-md:text-xs flex justify-end gap-5">
                     <a class="cursor-pointer underline-hover duration-300">About</a>
                     <a class="cursor-pointer underline-hover duration-300">Privacy Policy</a>
                     <a class="cursor-pointer underline-hover duration-300">Licencing</a>
@@ -280,13 +298,14 @@
 
 
             <div class="relative h-[3vh]">
-                <div class="text-center text-xs absolute bottom-0 left-[50%] translate-x-[-50%]">© 2024 Acme notes. All
+                <div class="max-md:text-[9px] w-full text-center text-xs absolute bottom-0">© 2024 Acme notes. All
                     Rights Reserved.</div>
                 <div class="max-w-[1000px] h-[1px] mx-auto mt-7 mb-10"></div>
             </div>
             <div class="h-[2vh] mt-7"></div>
 
         </section>
+
     </main>
     <button id="scrollToTopBtn" class="scroll-to-top"><i class="fa-solid fa-chevron-up"></i></button>
 </body>
