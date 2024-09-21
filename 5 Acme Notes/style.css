@@ -8,6 +8,7 @@
 
 html{
     scroll-behavior: smooth;
+    padding: 0 10px;
 }
 
 .hero-section {
