@@ -914,6 +914,11 @@ video {
   background-color: rgb(8 9 18 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#081200\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(8 18 0 / var(--tw-bg-opacity));
+}
+
 .bg-transparent{
   background-color: transparent;
 }
@@ -1126,9 +1131,12 @@ video {
   transition-duration: 300ms;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 html{
   scroll-behavior: smooth;
-  padding: 0 10px;
 }
 
 .hero-section {
@@ -1246,8 +1254,8 @@ button:hover .fa-angle-right {
 }
 
 @media (max-width: 500px) {
-  body{
-    padding: 0 10px;
+  #features{
+    padding: 0 7px;
   }
 }
 

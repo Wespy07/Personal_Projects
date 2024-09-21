@@ -6,9 +6,12 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+    box-sizing: border-box;
+}
+
 html{
     scroll-behavior: smooth;
-    padding: 0 10px;
 }
 
 .hero-section {
@@ -124,7 +127,7 @@ button:hover .fa-angle-right {
 }
 
 @media (max-width: 500px) {
-    body{
-        padding: 0 10px;
+    #features{
+        padding: 0 7px;
     }
 }
