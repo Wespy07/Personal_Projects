@@ -97,14 +97,14 @@ function AgeCalculator() {
     
 
     return (
-        <div className='w-full h-screen bg-gradient-to-tr from-[#771867] via-indigo-900 to-slate-900 flex items-center justify-center '>
+        <div className='w-full h-screen bg-gradient-to-tr from-slate-900 via-indigo-900 to-[#0a531a] flex items-center justify-center '>
             {/* main container */}
-            <div className='w-[650px] rounded-2xl rounded-br-[10rem] p-10 bg-gray-100'>
+            <div className='max-md:w-5/6 w-[650px] rounded-2xl rounded-br-[10rem] p-10 bg-gray-100'>
 
                 <form onSubmit={calculateAge}>
 
                     {/* user input fields */}
-                    <div className='flex gap-7 '>
+                    <div className='flex gap-7 max-md:gap-1 max-md:grid max-md:grid-cols-2 max-sm:grid-cols-1'>
                         <div>
                             <p className='text-sm text-gray-500 font-bold ml-1'>Day</p>
                             <input type="number" required
@@ -150,9 +150,9 @@ function AgeCalculator() {
 
                 {/* show the age */}
                 <div>
-                    <h2 className='text-7xl italic font-bold text-gray-900'><span className='text-purple-600'>{ageYears}</span> years</h2>
-                    <h2 className='text-7xl italic font-bold text-gray-900'><span className='text-purple-600'>{ageMonths}</span> months</h2>
-                    <h2 className='text-7xl italic font-bold text-gray-900'><span className='text-purple-600'>{ageDays}</span> days</h2>
+                    <h2 className='text-7xl max-md:text-5xl max-sm:text-4xl italic font-bold text-gray-900'><span className='text-purple-600'>{ageYears}</span> years</h2>
+                    <h2 className='text-7xl max-md:text-5xl max-sm:text-4xl italic font-bold text-gray-900'><span className='text-purple-600'>{ageMonths}</span> months</h2>
+                    <h2 className='text-7xl max-md:text-5xl max-sm:text-4xl italic font-bold text-gray-900'><span className='text-purple-600'>{ageDays}</span> days</h2>
                 </div>
             </div>
         </div>
