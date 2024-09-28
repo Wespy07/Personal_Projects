@@ -22,5 +22,5 @@ These are some of my personal web-dev projects to test and practice my skills in
 - Designed a responsive note-taking web application using Tailwind CSS, implementing intuitive UI features and optimizing for both desktop and mobile experiences.
 - Live site: [Click here](http://wespyacmenotes.netlify.app/)
 #
-### 6.) Age Calculator
+### 6.) Age Calculator | React
 - Live site: [Click here](https://wespyagecalculator.netlify.app/)
