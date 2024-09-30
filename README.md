@@ -23,4 +23,5 @@ These are some of my personal web-dev projects to test and practice my skills in
 - Live site: [Click here](http://wespyacmenotes.netlify.app/)
 #
 ### 6.) Age Calculator | React
+- Developed a responsive web application using React and Tailwind CSS to calculate age based on user input, handling complex date validation logic such as leap years, varying month lengths, and future date restrictions for accurate results and enhanced user experience.
 - Live site: [Click here](https://wespyagecalculator.netlify.app/)
