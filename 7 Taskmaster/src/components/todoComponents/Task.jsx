@@ -5,8 +5,8 @@ import StatusSelection from './Status';
 function TaskForm({ onSubmit }) {
     const [taskData, setTaskData] = useState({
         task: '',
-        priority: '',
-        status: ''
+        priority: 'Low', // Default value
+        status: 'Not Started' // Default value
     });
 
     const handleChange = (e) => {
@@ -16,8 +16,8 @@ function TaskForm({ onSubmit }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        onSubmit(taskData); 
-        setTaskData({ task: '', priority: '', status: '' }); 
+        onSubmit(taskData);
+        setTaskData({ task: '', priority: 'Low', status: 'Not Started' }); // Reset to default values
     };
 
     return (
