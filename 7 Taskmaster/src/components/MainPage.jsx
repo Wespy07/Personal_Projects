@@ -1,10 +1,14 @@
 import React from 'react'
+import Backdrop from './Backdrop'
+import Foredrop from './Foredrop'
 
 function MainPage() {
     return (
-        <main className='h-[calc(100vh-5.05rem)] w-full bg-[#a483f15d]'>
+        <>
+            < Backdrop />
+            < Foredrop />
             
-        </main>
+        </>
     )
 }
 

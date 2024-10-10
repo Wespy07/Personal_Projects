@@ -1,6 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+// import { getQuote } from '../api/fetchquote'
 
 function SideMenu() {
+//     const [quote, setQuote] = useState('')
+
+//     useEffect(() => {
+//         fetch('https://zenquotes.io/api/today')
+//         .then((res) => res.json())
+//         .then((data) => setQuote(data))
+// }, []);
+    
+//     console.log(quote)
+
     return (
         <aside className='h-[calc(100vh-5.05rem)] w-1/6 bg-indigo-950 text-white py-5 px-2 absolute flex flex-col justify-between'>
             <div>
