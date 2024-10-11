@@ -1,13 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PrioritySelection from './Priority';
 import StatusSelection from './Status';
 
-function TaskForm({ onSubmit }) {
+function TaskForm({ onSubmit, taskData: initialData }) {
     const [taskData, setTaskData] = useState({
         task: '',
         priority: 'Low', // Default value
         status: 'Not Started' // Default value
     });
+
+    useEffect(() => {
+        if (initialData) {
+            setTaskData(initialData); // Populate the form with task data if editing
+        }
+    }, [initialData]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -17,7 +23,7 @@ function TaskForm({ onSubmit }) {
     const handleSubmit = (e) => {
         e.preventDefault();
         onSubmit(taskData);
-        setTaskData({ task: '', priority: 'Low', status: 'Not Started' }); // Reset to default values
+        setTaskData({ task: '', priority: 'Low', status: 'Not Started' }); // Reset to default values after submission
     };
 
     return (
@@ -34,12 +40,14 @@ function TaskForm({ onSubmit }) {
                 onChange={handleChange}
             />
 
-            <div className='mt-5 w-[90%] mx-auto mb-2 flex justify-between'>
-                <PrioritySelection onChange={handleChange} />
-                <StatusSelection onChange={handleChange} />
+            <div className='max-sm:flex-nowrap max-x-md:flex-wrap max-x-md:gap-3 mt-5 w-full mx-auto mb-2 flex justify-between'>
+                <PrioritySelection onChange={handleChange} selectedPriority={taskData.priority} />
+                <StatusSelection onChange={handleChange} selectedStatus={taskData.status} />
             </div>
 
-            <button type='submit' className='w-full bg-indigo-600 py-2 rounded-md text-white hover:bg-indigo-800 mt-5'>Add</button>
+            <button type='submit' className='w-full bg-indigo-600 py-2 rounded-md text-white hover:bg-indigo-800 mt-5'>
+                {initialData ? 'Update' : 'Add'} Task
+            </button>
         </form>
     );
 }

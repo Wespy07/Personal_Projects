@@ -2,10 +2,10 @@ import React from 'react';
 
 function PrioritySelection({ onChange }) {
     return (
-        <div className='bg-indigo-400 rounded-lg py-7 px-5'>
+        <div className='bg-indigo-400 rounded-lg py-7 px-5 max-x-sm:px-3'>
             <h4 className='font-medium mb-3'>Priority</h4>
             {['High', 'Medium', 'Low'].map(priority => (
-                <label key={priority} className="px-2 py-1 bg-transparent cursor-pointer">
+                <label key={priority} className="px-2 py-1 bg-transparent cursor-pointer max-sm:flex max-sm:text-sm">
                     <input
                         type="radio"
                         name="priority"
