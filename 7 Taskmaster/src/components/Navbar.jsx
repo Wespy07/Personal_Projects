@@ -17,9 +17,9 @@ function Navbar() {
             </nav>
 
             {/* Menu toggle button */}
-            <div className='absolute top-5 right-5 text-2xl text-white'>
+            {/* <div className='absolute top-5 right-5 text-2xl text-white'>
                 <i className="fa-solid fa-bars cursor-pointer" onClick={toggleMenu}></i>
-            </div>
+            </div> */}
 
             {/* Pass the isMenuOpen state to SideMenu */}
             <SideMenu isMenuOpen={isMenuOpen} onClose={toggleMenu} />

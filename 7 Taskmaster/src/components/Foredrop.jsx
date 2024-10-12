@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Modal from './todoComponents/Modal';
 import TaskForm from './todoComponents/Task';
 import ConfirmationModal from './todoComponents/Confirmation';
+
+import { motion } from "framer-motion"
 
 function Foredrop() {
     const [showModal, setShowModal] = useState(false);
@@ -9,6 +11,21 @@ function Foredrop() {
     const [tasks, setTasks] = useState([]);
     const [editTaskIndex, setEditTaskIndex] = useState(null);
     const [taskToDeleteIndex, setTaskToDeleteIndex] = useState(null);
+
+    const containerRef = useRef(null)
+
+    useEffect(() => {
+        const storedTasks = localStorage.getItem('tasks');
+        if (storedTasks) {
+            setTasks(JSON.parse(storedTasks));
+        }
+    }, []);
+
+    useEffect(() => {
+        if (tasks.length > 0) {
+            localStorage.setItem('tasks', JSON.stringify(tasks));
+        }
+    }, [tasks]);
 
     function openModal() {
         setShowModal(true);
@@ -98,7 +115,7 @@ function Foredrop() {
     };
 
     return (
-        <div className='w-full h-[calc(100vh-5.05rem)] absolute right-0 z-[2] p-5 flex gap-7 flex-wrap'>
+        <div ref={containerRef} className='w-full h-[calc(100vh-5.05rem)] absolute right-0 z-[2] p-5 flex gap-7 flex-wrap'>
             <div onClick={openModal} className='max-sm:h-52 max-sm:w-[152px] max-md:h-56 max-md:w-52 cursor-pointer h-60 w-56 rounded-[10px] bg-purple-500 hover:scale-110 transition-all duration-300'>
                 <div className='flex justify-center items-center h-full'>
                     <i className="max-sm:px-[17px] max-sm:text-3xl max-sm:py-3 fa-solid fa-plus text-5xl bg-white rounded-full py-5 px-[23px] cursor-pointer"></i>
@@ -113,7 +130,14 @@ function Foredrop() {
                     'bg-purple-400';
 
                 return (
-                    <div key={index} className={`max-sm:h-52 max-sm:w-[152px] max-md:h-56 max-md:w-52 h-60 w-56 rounded-[10px] ${bgColor} px-3 pt-0 pb-1 transition-colors duration-700`}>
+                    <motion.div 
+                    drag 
+                    dragConstraints={containerRef} 
+                    whileDrag={{ scale: 1.2 }} 
+                    dragElastic={.2}
+                    dragTransition={{ bounceStiffness: 1000, bounceDamping: 30 }}
+                    key={index} 
+                    className={`max-sm:h-52 max-sm:w-[152px] max-md:h-56 max-md:w-52 h-60 w-56 rounded-[10px] ${bgColor} px-3 pt-0 pb-1 transition-colors duration-700 cursor-grab`}>
                         <div className='flex flex-col justify-between items-start h-full overflow-hidden'>
                             <div className='flex justify-between w-full text-[12px] mt-2'>
                                 <button onClick={() => handleEdit(index)} className='text-blue-900 hover:underline'>
@@ -142,7 +166,7 @@ function Foredrop() {
                                 </p>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 );
             })}
 
