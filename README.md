@@ -26,6 +26,6 @@ These are some of my personal web-dev projects to test and practice my skills in
 - Developed a responsive web application using React and Tailwind CSS to calculate age based on user input, handling complex date validation logic such as leap years, varying month lengths, and future date restrictions for accurate results and enhanced user experience.
 - Live site: [Click here](https://wespyagecalculator.netlify.app/)
 #
-### 7.) Taskmaster | React
+### 7.) Taskmaster
 - Built a task management app using React, Framer Motion, and Tailwind CSS, implementing draggable task cards, status/priority updates, and local storage persistence for seamless user experience across sessions.
 - Live site: [Click here](https://wespy-taskmaster-react.netlify.app/)
