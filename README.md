@@ -27,5 +27,5 @@ These are some of my personal web-dev projects to test and practice my skills in
 - Live site: [Click here](https://wespyagecalculator.netlify.app/)
 #
 ### 7.) Taskmaster | React
-- Built a task management app using React, Framer Motion, and Tailwind CSS, implementing draggable task cards, status/priority updates, and local storage persistence for seamless user experience across sessions.
+- Built a task management app using React, Framer Motion, and Tailwind CSS, implementing draggable task cards, status & priority updates, and local storage persistence for seamless user experience across sessions.
 - Live site: [Click here](https://wespy-taskmaster-react.netlify.app/)
